@@ -1,0 +1,89 @@
+{{#section 'head'}}
+  <link rel="stylesheet" type="text/css" href="/css/editBook.css" />
+{{/section}}
+
+{{> navbar}}
+
+<div class="container">
+  <div class="row py-5">
+    <div class="col-lg-8 mx-auto text-white text-center">
+      <h1 class="display-4">Insert Book</h1>
+    </div>
+  </div>
+  <div class="col-lg-12 mx-auto">
+    <div class="bg-light p-5 rounded shadow">
+        <form action="/book/new" method="POST" class="basicForm input-group">
+            <small style="display: {{choose invalidErrDisplay 'none'}}; color: red" class="center">
+              Invalid input, please check your fields and try again.
+            </small>
+
+            <small style="display: {{choose successDisplay 'none'}}; color: green" class="center">
+              Book added successfully.
+            </small>
+
+            <input type="text" name="title" id="title" value="{{choose book.TITLE ''}}" placeholder="Title..."
+            class="mb-4 form-control border-0 bg-light shadow rounded-pill">
+
+            <textarea name="summary" id="summary" cols="30" rows="10"class="mb-4 form-control border-0 bg-light shadow rounded" placeholder="Summary...">{{choose book.SUMMARY ''}}</textarea>
+
+            <input type="text" name="isbn" id="isbn" value="{{choose book.ISBN.[0] ''}}"
+            class="mb-4 form-control border-0 bg-light shadow rounded-pill" placeholder="ISBN...">
+
+            <input type="text" name="authorName" id="authorName" value="{{choose book.AUTHOR.NAME ''}}"
+            class="mb-4 form-control border-0 bg-light shadow rounded-pill" placeholder="Author name...">
+
+            <input type="text" name="authorSurname" id="authorSurname" value="{{choose book.AUTHOR.SURNAME ''}}"
+             class="mb-4 form-control border-0 bg-light shadow rounded-pill" placeholder="Author surname...">
+
+             <button type="submit" class="btn rounded-pill shadow col-lg-2 ml-auto">Add</button>
+        </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {{!-- <form action="/book/new" method="post" class="basicForm">
+        <small
+        style="display: {{choose invalidErrDisplay 'none'}}; color: red"
+        class="center"
+        >
+          Invalid input, please check your fields and try again.
+        </small>
+        <small
+        style="display: {{choose successDisplay 'none'}}; color: green"
+        class="center"
+        >
+          Book added successfully.
+        </small>
+        <label for="title">Book title</label>
+        <input type="text" name="title" id="title" value="{{choose book.title ''}}">
+        <label for="summary">Summary</label>
+        <textarea name="summary" id="summary" cols="30" rows="10" value="{{choose book.summary ''}}"></textarea>
+        <label for="isbn">ISBN</label>
+        <input type="text" name="isbn" id="isbn" value="{{choose book.isbn ''}}">
+        <label for="authorName">Author name</label>
+        <input type="text" name="authorName" id="authorName" value="{{choose book.authorName ''}}">
+        <label for="authorSurname">Author surname</label>
+        <input type="text" name="authorSurname" id="authorSurname" value="{{choose book.authorSurname ''}}">
+        <button type="submit">Add</button>
+      </form> --}}

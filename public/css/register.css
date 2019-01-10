@@ -1,0 +1,23 @@
+.basicForm {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  line-height: 30px;
+}
+
+.center {
+  text-align: center;
+}
+
+.btn {
+  transition-duration: 0.4s;
+  background-color: lightskyblue;
+  border: 2px solid lightskyblue;
+  border-radius: 6px;
+}
+
+.btn:hover {
+  background-color: #4e98ff;
+  border-color: #4e98ff;
+  color: white;
+}

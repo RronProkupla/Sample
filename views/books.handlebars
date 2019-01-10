@@ -1,0 +1,25 @@
+{{#section 'head'}}
+  <link rel="stylesheet" type="text/css" href="/css/books.css" />
+  
+{{/section}}
+{{> navbar}}
+<div class="my-4"></div>
+{{> searchbar}}
+
+{{#if books}}
+{{#each books}}
+<div class="container mx-auto my-3">
+    <div class="card w-100">
+    <div class="card-body">
+        <h5 class="card-title">{{TITLE}}</h5>
+        <p class="card-text">Summary: {{SUMMARY}}</p>
+        <p class="card-text">Author: {{AUTHOR.NAME}} {{AUTHOR.SURNAME}}</p>
+        <p class="card-text">ISBN: {{ISBN.[0]}}</p>
+        <a href="/book/{{BOOKID}}" class="btn btn-primary ml-auto">See more</a>
+    </div>
+    </div>
+</div>
+{{/each}}
+{{else}}
+<p>No results</p>
+{{/if}}

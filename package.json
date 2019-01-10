@@ -1,0 +1,29 @@
+{
+  "name": "bookdb",
+  "version": "1.0.0",
+  "description": "Projekti i parë në lëndën Modele të Dhënave dhe Gjuhë të Pyetësorëve",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArditBaloku/BookDB.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArditBaloku/BookDB/issues"
+  },
+  "homepage": "https://github.com/ArditBaloku/BookDB#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.1",
+    "joi": "^14.3.1",
+    "oracledb": "^4.1.0"
+  }
+}

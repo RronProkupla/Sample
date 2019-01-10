@@ -1,0 +1,30 @@
+{{#section 'head'}}
+  <link rel="stylesheet" type="text/css" href="/css/login.css" />
+{{/section}}
+{{> navbar}}
+<div class="container">
+  <div class="row py-4">
+      <div class="col-lg-8 mx-auto text-white text-center">
+        <h1 class="display-4">Log in</h1>
+      </div>
+  </div>
+
+   <div class="col-lg-8 mx-auto">
+     <div class="bg-light p-5 rounded shadow">
+      <form action='login' method='POST' class='basicForm input-group'>
+        <input type='text' name='email' id='email' placeholder="Email" class="mb-4 form-control border-0 bg-light shadow rounded-pill"/>
+        <input type='password' name='password' id='password' placeholder="Password" class="mb-4 form-control border-0 bg-light rounded-pill shadow"/>
+        <br />
+        <input type='submit' class="btn rounded-pill shadow" title="Login" value="Log in"/>
+      </form>
+      <br />
+      <small
+        style="display: {{choose invalidErrDisplay 'none'}}; color: red"
+        class="center"
+      >
+        Email or password is invalid.
+      </small>
+      </div>
+    </div>
+
+</div>

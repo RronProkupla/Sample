@@ -1,0 +1,19 @@
+.basicForm {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  line-height: 30px;
+}
+
+.btn {
+  transition-duration: 0.4s;
+  background-color: lightskyblue;
+  border: 2px solid lightskyblue;
+  border-radius: 6px;
+}
+
+.btn:hover {
+  background-color: #2869c5;
+  border-color: #2869c5;
+  color: white;
+}
